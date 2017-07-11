@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="head">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Application.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="AsyncRequestQuene.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="catch_dump_file.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="Timer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerConfig.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="SeverUtility.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ServerStringTable.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="ISeverApp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ConfigReader.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\IConfigFile.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Utility.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="log4z.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="jsoncpp.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Application.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="AsyncRequestQuene.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="AutoBuffer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="catch_dump_file.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="IGlobalModule.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerCommon.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Timer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerConfig.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerDefine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerMessageDefine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="Singleton.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="SeverUtility.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ServerStringTable.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\NativeTypes.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ISeverApp.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\CommonData.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\CommonDefine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ConfigReader.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\IConfigFile.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Utility.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\MessageDefine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\MessageIdentifer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="log4z.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="ConfigDefine.h">
+      <Filter>src</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

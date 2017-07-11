@@ -1,0 +1,226 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5AC88CEF-63E2-4998-A690-25ED685B562C}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>MaJiangServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v140</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../Bin/ServerBin</OutDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../Bin/ServerRelease</OutDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../ServerCommon;../../Common;../NetworkUtility/src;./src</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>../Bin/Lib;C:\local\boost_1_63_0\lib32-msvc-14.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>NetworkUtilityD.lib;GameCommon_D.lib;ServerCommon_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions);SERVER</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>../ServerCommon;../../Common;../NetworkUtility/src;./src</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>../Bin/Lib;C:\local\boost_1_63_0\lib32-msvc-14.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <AdditionalDependencies>NetworkUtility.lib;ServerCommon.lib;GameCommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="src\BPMJPlayer.h" />
+    <ClInclude Include="src\BPMJPlayerCard.h" />
+    <ClInclude Include="src\BPMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\BPMJRoom.h" />
+    <ClInclude Include="src\BPRoomStateAskForPengOrHu.h" />
+    <ClInclude Include="src\BPRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\BPRoomStateWaitPlayerChu.h" />
+    <ClInclude Include="src\CYMJPlayer.h" />
+    <ClInclude Include="src\CYMJPlayerCard.h" />
+    <ClInclude Include="src\CYMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\CYMJRoom.h" />
+    <ClInclude Include="src\CYRoomStateAskForPengOrHu.h" />
+    <ClInclude Include="src\CYRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\CYRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\CYRoomStateWaitPlayerChu.h" />
+    <ClInclude Include="src\GameRecorderMgr.h" />
+    <ClInclude Include="src\GameReplayMgr.h" />
+    <ClInclude Include="src\HHMJPlayer.h" />
+    <ClInclude Include="src\HHMJPlayerCard.h" />
+    <ClInclude Include="src\HHMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\HHMJRoom.h" />
+    <ClInclude Include="src\HHRoomStateAskForPengOrHu.h" />
+    <ClInclude Include="src\HHRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\HHRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\HHRoomStateWaitPlayerChu.h" />
+    <ClInclude Include="src\IGameRecorder.h" />
+    <ClInclude Include="src\IGameReplay.h" />
+    <ClInclude Include="src\IGameRoom.h" />
+    <ClInclude Include="src\IMJPlayer.h" />
+    <ClInclude Include="src\IMJPoker.h" />
+    <ClInclude Include="src\IMJRoom.h" />
+    <ClInclude Include="src\IMJRoomState.h" />
+    <ClInclude Include="src\JSMJPlayer.h" />
+    <ClInclude Include="src\JSMJPlayerCard.h" />
+    <ClInclude Include="src\JSMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\JSMJRoom.h" />
+    <ClInclude Include="src\JSRoomStateAskForPengOrHu.h" />
+    <ClInclude Include="src\JSRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\JSRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\JSRoomStateWaitPlayerChu.h" />
+    <ClInclude Include="src\MJCard.h" />
+    <ClInclude Include="src\MJDefine.h" />
+    <ClInclude Include="src\MJGameReplayManager.h" />
+    <ClInclude Include="src\MJGoldRoom.h" />
+    <ClInclude Include="src\MJPlayer.h" />
+    <ClInclude Include="src\MJPlayerCard.h" />
+    <ClInclude Include="src\MJPrivateRoom.h" />
+    <ClInclude Include="src\MJRoomManager.h" />
+    <ClInclude Include="src\MJRoomStateAskForPengOrHu.h" />
+    <ClInclude Include="src\MJRoomStateAskForRobotGang.h" />
+    <ClInclude Include="src\MJRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\MJRoomStateGameEnd.h" />
+    <ClInclude Include="src\MJRoomStateStartGame.h" />
+    <ClInclude Include="src\MJRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\MJRoomStateWaitPlayerChu.h" />
+    <ClInclude Include="src\MJRoomStateWaitReady.h" />
+    <ClInclude Include="src\MJServer.h" />
+    <ClInclude Include="src\NJMJPlayer.h" />
+    <ClInclude Include="src\NJMJPlayerCard.h" />
+    <ClInclude Include="src\NJMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\NJMJRoom.h" />
+    <ClInclude Include="src\NJRoomStateBuHua.h" />
+    <ClInclude Include="src\NJRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\NJRoomStateStartGame.h" />
+    <ClInclude Include="src\NJRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\SZMJPlayer.h" />
+    <ClInclude Include="src\SZMJPlayerCard.h" />
+    <ClInclude Include="src\SZMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\SZMJRoom.h" />
+    <ClInclude Include="src\SZRoomStateBuHua.h" />
+    <ClInclude Include="src\SZRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\SZRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\TestHuiModule.h" />
+    <ClInclude Include="src\XLFanXingChecker.h" />
+    <ClInclude Include="src\XLMJPlayer.h" />
+    <ClInclude Include="src\XLMJPlayerCard.h" />
+    <ClInclude Include="src\XLMJRoom.h" />
+    <ClInclude Include="src\XLMJSettle.h" />
+    <ClInclude Include="src\XLRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\XLRoomStateStartGame.h" />
+    <ClInclude Include="src\XLRoomStateWaitDecideQue.h" />
+    <ClInclude Include="src\XLRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\XZMJRoom.h" />
+    <ClInclude Include="src\YZMJPlayer.h" />
+    <ClInclude Include="src\YZMJPlayerCard.h" />
+    <ClInclude Include="src\YZMJPlayerRecorderInfo.h" />
+    <ClInclude Include="src\YZMJRoom.h" />
+    <ClInclude Include="src\YZRoomStateAskForPengOrHu.h" />
+    <ClInclude Include="src\YZRoomStateDoPlayerAct.h" />
+    <ClInclude Include="src\YZRoomStateWaitPlayerAct.h" />
+    <ClInclude Include="src\YZRoomStateWaitPlayerChu.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\BPMJPlayer.cpp" />
+    <ClCompile Include="src\BPMJPlayerCard.cpp" />
+    <ClCompile Include="src\BPMJRoom.cpp" />
+    <ClCompile Include="src\CYMJPlayer.cpp" />
+    <ClCompile Include="src\CYMJPlayerCard.cpp" />
+    <ClCompile Include="src\CYMJRoom.cpp" />
+    <ClCompile Include="src\GameRecorderMgr.cpp" />
+    <ClCompile Include="src\GameReplayMgr.cpp" />
+    <ClCompile Include="src\HHMJPlayer.cpp" />
+    <ClCompile Include="src\HHMJPlayerCard.cpp" />
+    <ClCompile Include="src\HHMJRoom.cpp" />
+    <ClCompile Include="src\IGameRecorder.cpp" />
+    <ClCompile Include="src\IMJRoom.cpp" />
+    <ClCompile Include="src\JSMJPlayer.cpp" />
+    <ClCompile Include="src\JSMJPlayerCard.cpp" />
+    <ClCompile Include="src\JSMJRoom.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\MJCard.cpp" />
+    <ClCompile Include="src\MJGameReplayManager.cpp" />
+    <ClCompile Include="src\MJGoldRoom.cpp" />
+    <ClCompile Include="src\MJPlayer.cpp" />
+    <ClCompile Include="src\MJPlayerCard.cpp" />
+    <ClCompile Include="src\MJPrivateRoom.cpp" />
+    <ClCompile Include="src\MJRoomManager.cpp" />
+    <ClCompile Include="src\MJServer.cpp" />
+    <ClCompile Include="src\NJMJPlayer.cpp" />
+    <ClCompile Include="src\NJMJPlayerCard.cpp" />
+    <ClCompile Include="src\NJMJRoom.cpp" />
+    <ClCompile Include="src\SZMJPlayer.cpp" />
+    <ClCompile Include="src\SZMJPlayerCard.cpp" />
+    <ClCompile Include="src\SZMJRoom.cpp" />
+    <ClCompile Include="src\TestHuiModule.cpp" />
+    <ClCompile Include="src\XLMJPlayer.cpp" />
+    <ClCompile Include="src\XLMJPlayerCard.cpp" />
+    <ClCompile Include="src\XLMJRoom.cpp" />
+    <ClCompile Include="src\XZMJRoom.cpp" />
+    <ClCompile Include="src\YZMJPlayer.cpp" />
+    <ClCompile Include="src\YZMJPlayerCard.cpp" />
+    <ClCompile Include="src\YZMJRoom.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

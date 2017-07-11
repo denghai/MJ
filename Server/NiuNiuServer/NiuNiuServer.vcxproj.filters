@@ -1,0 +1,135 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="SvrCommon">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{273b53a0-6929-442f-a7c8-fa90d95024c9}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room">
+      <UniqueIdentifier>{61daab1e-47ec-44b8-b492-301beada62e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room\state">
+      <UniqueIdentifier>{796e4516-7b78-4635-80c6-e0b05eb283df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room\stateNew">
+      <UniqueIdentifier>{d5749e3f-65fa-4f01-a882-03f50cc3ab7e}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\NiuNiuPeerCard.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuServer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoom.h">
+      <Filter>src\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomPlayer.h">
+      <Filter>src\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomDistribute4CardState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomTryBankerState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\NiuNiuMessageDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomBetState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomRandBankerState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomDistributeFinalCardState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomGameResult.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\httpRequest.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomManger.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuRoomPlayerCaculateCardState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\RewardConfig.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuGrabBanker.h">
+      <Filter>src\Room\stateNew</Filter>
+    </ClInclude>
+    <ClInclude Include="src\NiuNiuWaitStartGame.h">
+      <Filter>src\Room\stateNew</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\NiuNiuPeerCard.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuServer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoom.cpp">
+      <Filter>src\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomPlayer.cpp">
+      <Filter>src\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomDistribute4CardState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomTryBankerState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomBetState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomRandBankerState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomDistributeFinalCardState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomGameResult.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\httpRequest.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomManger.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuRoomPlayerCaculateCardState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\RewardConfig.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuGrabBanker.cpp">
+      <Filter>src\Room\stateNew</Filter>
+    </ClCompile>
+    <ClCompile Include="src\NiuNiuWaitStartGame.cpp">
+      <Filter>src\Room\stateNew</Filter>
+    </ClCompile>
+  </ItemGroup>
+</Project>

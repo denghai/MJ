@@ -1,0 +1,373 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="src">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{4f410397-7423-480e-aa60-16fb3d675dfd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room">
+      <UniqueIdentifier>{9b9c4c66-6898-493a-aa09-2f2238c57ae6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room\GoldenPokerRoom">
+      <UniqueIdentifier>{7aea3a20-f007-438a-960d-b2117d2e8c91}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\App">
+      <UniqueIdentifier>{cf27c37a-8c66-497b-bb54-dce03e04adc8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Config">
+      <UniqueIdentifier>{7216439b-75de-4289-97e5-9dca000537d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Rank">
+      <UniqueIdentifier>{fd36f033-7103-4ffb-896b-7c1049a0ecc3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Brocast">
+      <UniqueIdentifier>{9ba1bb42-320c-49d6-93b4-5f99dfb146a5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Player">
+      <UniqueIdentifier>{6c806493-f39d-4048-a829-4052863fede2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SvrCommon">
+      <UniqueIdentifier>{c88ff6d4-530f-4d24-b788-b975c4e6d75b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\RoomData">
+      <UniqueIdentifier>{7a65368f-cbed-4f24-8a33-668d7277a0e8}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Config">
+      <UniqueIdentifier>{fe25b9b0-e2bb-46e9-949b-66585a75b186}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Uitility">
+      <UniqueIdentifier>{8293aa62-12e6-4d91-bbf8-0f36ebd090f5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Common\Card">
+      <UniqueIdentifier>{721f0a8c-4c1f-4158-b62a-260af1d9daba}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room\TexasPoker">
+      <UniqueIdentifier>{054dbf27-2762-46c0-97ba-89f0948be107}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room\Base">
+      <UniqueIdentifier>{522a3b72-34fe-4bc3-b066-3894591e441b}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\CommonDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\MessageDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\MessageIdentifer.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GoldenMessageDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomGolden.h">
+      <Filter>src\Room\GoldenPokerRoom</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomBase.h">
+      <Filter>src\Room\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomManager.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameServerApp.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\main.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerManager.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomTexasPoker.h">
+      <Filter>src\Room\TexasPoker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\TaxasPokerMessage.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GameRank.h">
+      <Filter>src\Rank</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Brocaster.h">
+      <Filter>src\Brocast</Filter>
+    </ClInclude>
+    <ClInclude Include="src\InformConfig.h">
+      <Filter>src\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SlotMachine.h">
+      <Filter>src\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RobotManager.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\EventCenter.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Events.h">
+      <Filter>src\App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IPlayerComponent.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Player.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerBaseData.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerFriend.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerEvent.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerItem.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerMail.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerMission.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerOnlineBox.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\PlayerShop.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomPeer.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TaxasPokerPeer.h">
+      <Filter>src\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\ServerConfig.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\Timer.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\RoomBaseData.h">
+      <Filter>Common\RoomData</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\BoxConfig.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ConfigManager.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ConfigReader.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ContinueLoginConfig.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\IConfigFile.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ItemConfig.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\RoomConfig.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\ShopConfg.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\MissionConfig.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\LogManager.h">
+      <Filter>Common\Uitility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\Utility.h">
+      <Filter>Common\Uitility</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\CardPoker.h">
+      <Filter>Common\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\PeerCard.h">
+      <Filter>Common\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\TaxasPokerPeerCard.h">
+      <Filter>Common\Card</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\CommonData.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomBaseNew.h">
+      <Filter>src\Room\Base</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GoldenRoomData.h">
+      <Filter>Common\RoomData</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomGoldenNew.h">
+      <Filter>src\Room\GoldenPokerRoom</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\TitleLevelConfig.h">
+      <Filter>Common\Config</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\TaxasRoomData.h">
+      <Filter>Common\RoomData</Filter>
+    </ClInclude>
+    <ClInclude Include="src\RoomTaxasNew.h">
+      <Filter>src\Room\TexasPoker</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\ServerMessageDefine.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\TaxasMessageDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\RoomGolden.cpp">
+      <Filter>src\Room\GoldenPokerRoom</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomBase.cpp">
+      <Filter>src\Room\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameServerApp.cpp">
+      <Filter>src\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerManager.cpp">
+      <Filter>src\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomManager.cpp">
+      <Filter>src\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomTexasPoker.cpp">
+      <Filter>src\Room\TexasPoker</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GameRank.cpp">
+      <Filter>src\Rank</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Brocaster.cpp">
+      <Filter>src\Brocast</Filter>
+    </ClCompile>
+    <ClCompile Include="src\InformConfig.cpp">
+      <Filter>src\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SlotMachine.cpp">
+      <Filter>src\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RobotManager.cpp">
+      <Filter>src\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\EventCenter.cpp">
+      <Filter>src\App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\IPlayerComponent.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Player.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerBaseData.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerFriend.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerItem.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerMail.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerMission.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerOnlineBox.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\PlayerShop.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomPeer.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TaxasPokerPeer.cpp">
+      <Filter>src\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\ServerConfig.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\Timer.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\RoomBaseData.cpp">
+      <Filter>Common\RoomData</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\BoxConfig.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ConfigManager.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ConfigReader.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ContinueLoginConfig.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\IConfigFile.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ItemConfig.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\RoomConfig.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\ShopConfg.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\MissionConfig.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\LogManager.cpp">
+      <Filter>Common\Uitility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\Utility.cpp">
+      <Filter>Common\Uitility</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\CardPoker.cpp">
+      <Filter>Common\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\PeerCard.cpp">
+      <Filter>Common\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\TaxasPokerPeerCard.cpp">
+      <Filter>Common\Card</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomBaseNew.cpp">
+      <Filter>src\Room\Base</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\GoldenRoomData.cpp">
+      <Filter>Common\RoomData</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomGoldenNew.cpp">
+      <Filter>src\Room\GoldenPokerRoom</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\TitleLevelConfig.cpp">
+      <Filter>Common\Config</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Common\TaxasRoomData.cpp">
+      <Filter>Common\RoomData</Filter>
+    </ClCompile>
+    <ClCompile Include="src\RoomTaxasNew.cpp">
+      <Filter>src\Room\TexasPoker</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+</Project>

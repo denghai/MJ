@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5541E81B-70F6-425F-871A-C6A97DB550AE}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>TaxasServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../Bin/ServerBin</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+    <LibraryPath>C:\local\boost_1_59_0\lib32-msvc-11.0;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../Bin/ServerRelease</OutDir>
+    <LibraryPath>C:\local\boost_1_59_0\lib32-msvc-11.0;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;JSON_DLL;_DEBUG;_CONSOLE;%(PreprocessorDefinitions);SERVER;TAXAS_SERVER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../NetworkUtility/src;../ServerCommon;../../Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>NetworkUtilityD.lib;%(AdditionalDependencies);libcurl_imp.lib;ServerCommon_D.lib;GameCommon_D.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bin/Lib;C:\local\boost_1_61_0\lib32-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;JSON_DLL;NDEBUG;_CONSOLE;SERVER;TAXAS_SERVER;%(PreprocessorDefinitions);SERVER;TAXAS_SERVER</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../NetworkUtility/src;../ServerCommon;../../Common;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>NetworkUtility.lib;%(AdditionalDependencies);libcurl_imp.lib;ServerCommon.lib;GameCommon.lib</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bin/Lib;C:\local\boost_1_61_0\lib32-msvc-12.0;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\TaxasMessageDefine.h" />
+    <ClInclude Include="..\..\Common\TaxasPeerCardAdapter.h" />
+    <ClInclude Include="..\..\Common\TaxasPokerPeerCard.h" />
+    <ClInclude Include="..\ServerCommon\httpRequest.h" />
+    <ClInclude Include="..\ServerCommon\RewardConfig.h" />
+    <ClInclude Include="src\InsuranceCheck.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\RoomManager.h" />
+    <ClInclude Include="src\TaxasPlayer.h" />
+    <ClInclude Include="src\TaxasRoom.h" />
+    <ClInclude Include="src\TaxasRoomState.h" />
+    <ClInclude Include="src\TaxasServerApp.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\TaxasPokerPeerCard.cpp" />
+    <ClCompile Include="..\ServerCommon\httpRequest.cpp" />
+    <ClCompile Include="..\ServerCommon\RewardConfig.cpp" />
+    <ClCompile Include="src\InsuranceCheck.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\RoomManager.cpp" />
+    <ClCompile Include="src\TaxasPlayer.cpp" />
+    <ClCompile Include="src\TaxasRoom.cpp" />
+    <ClCompile Include="src\TaxasRoomState.cpp" />
+    <ClCompile Include="src\TaxasServerApp.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

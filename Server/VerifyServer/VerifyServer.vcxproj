@@ -1,0 +1,175 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="14.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{5D591419-420C-46EA-B153-DD5A426FA989}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>VerifyServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v140</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../Bin/ServerBin</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+    <LibraryPath>C:\local\boost_1_59_0\lib32-msvc-11.0;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../Bin/ServerRelease</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+    <LibraryPath>C:\local\boost_1_59_0\lib32-msvc-11.0;$(LibraryPath)</LibraryPath>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;SERVER;VERIFY_SERVER;_WIN32_WINNT=0x0601;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./src/;../../Common;../ServerCommon;../DBServer/src;../ServerCommon/pthreadLib;../DBServer/src/include;../NetworkUtility/src;C:\local\boost_1_63_0;./src/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>-DBOOST_DATE_TIME_NO_LIB -DBOOST_REGEX_NO_LIB  -DASIO_HAS_BOOST_REGEX %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>libmysql.lib;pthreadVC2.lib;libcurl_imp.lib;NetworkUtilityD.lib;ServerCommon_D.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bin/Lib;C:\local\boost_1_63_0\lib32-msvc-14.0</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;SERVER;VERIFY_SERVER;_WIN32_WINNT=0x0601;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>./src/;../../Common;../ServerCommon;../DBServer/src;../ServerCommon/pthreadLib;../DBServer/src/include;../NetworkUtility/src;C:\local\boost_1_63_0;./src/include;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <AdditionalOptions>-DBOOST_REGEX_NO_LIB %(AdditionalOptions)</AdditionalOptions>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>libmysql.lib;pthreadVC2.lib;libcurl_imp.lib;NetworkUtility.lib;ServerCommon.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bin/Lib;C:\local\boost_1_63_0\lib32-msvc-14.0</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="..\DBServer\src\DataBaseThread.cpp" />
+    <ClCompile Include="..\DBServer\src\DBRequest.cpp" />
+    <ClCompile Include="..\DBServer\src\MySqlData.cpp" />
+    <ClCompile Include="..\ServerCommon\DBTask.cpp" />
+    <ClCompile Include="..\ServerCommon\httpRequest.cpp" />
+    <ClCompile Include="..\ServerCommon\mutex.cpp" />
+    <ClCompile Include="..\ServerCommon\Sem.cpp" />
+    <ClCompile Include="..\ServerCommon\TaskPool.cpp" />
+    <ClCompile Include="..\ServerCommon\ThreadMod.cpp" />
+    <ClCompile Include="..\ServerCommon\WorkThread.cpp" />
+    <ClCompile Include="src\AnyLoginTask.cpp" />
+    <ClCompile Include="src\ApnsTask.cpp" />
+    <ClCompile Include="src\AppleVerifyTask.cpp" />
+    <ClCompile Include="src\DBVerifyTask.cpp" />
+    <ClCompile Include="src\HttpModule.cpp" />
+    <ClCompile Include="src\httpServer\connection.cpp" />
+    <ClCompile Include="src\httpServer\connection_manager.cpp" />
+    <ClCompile Include="src\httpServer\mime_types.cpp" />
+    <ClCompile Include="src\httpServer\reply.cpp" />
+    <ClCompile Include="src\httpServer\request_handler.cpp" />
+    <ClCompile Include="src\httpServer\request_parser.cpp" />
+    <ClCompile Include="src\httpServer\server.cpp" />
+    <ClCompile Include="src\TaskPoolModule.cpp" />
+    <ClCompile Include="src\WeChatOrderTask.cpp" />
+    <ClCompile Include="src\HMAC_SHA1.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Md5.cpp" />
+    <ClCompile Include="src\MiVerifyManager.cpp" />
+    <ClCompile Include="src\SHA1.cpp" />
+    <ClCompile Include="src\tinyxml\tinystr.cpp" />
+    <ClCompile Include="src\tinyxml\tinyxml.cpp" />
+    <ClCompile Include="src\tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="src\tinyxml\tinyxmlparser.cpp" />
+    <ClCompile Include="src\VerifyApp.cpp" />
+    <ClCompile Include="src\VerifyRequest.cpp" />
+    <ClCompile Include="src\WeChatVerifyTask.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\DBServer\src\DataBaseThread.h" />
+    <ClInclude Include="..\DBServer\src\DBRequest.h" />
+    <ClInclude Include="..\DBServer\src\DBRequestFlags.h" />
+    <ClInclude Include="..\DBServer\src\MySqlData.h" />
+    <ClInclude Include="..\ServerCommon\DBTask.h" />
+    <ClInclude Include="..\ServerCommon\httpRequest.h" />
+    <ClInclude Include="..\ServerCommon\ITask.h" />
+    <ClInclude Include="..\ServerCommon\mutex.h" />
+    <ClInclude Include="..\ServerCommon\Sem.h" />
+    <ClInclude Include="..\ServerCommon\TaskPool.h" />
+    <ClInclude Include="..\ServerCommon\ThreadMod.h" />
+    <ClInclude Include="..\ServerCommon\WorkThread.h" />
+    <ClInclude Include="src\AnyLoginTask.h" />
+    <ClInclude Include="src\ApnsTask.h" />
+    <ClInclude Include="src\AppleVerifyTask.h" />
+    <ClInclude Include="src\DBVerifyTask.h" />
+    <ClInclude Include="src\HttpModule.h" />
+    <ClInclude Include="src\httpServer\connection.hpp" />
+    <ClInclude Include="src\httpServer\connection_manager.hpp" />
+    <ClInclude Include="src\httpServer\header.hpp" />
+    <ClInclude Include="src\httpServer\mime_types.hpp" />
+    <ClInclude Include="src\httpServer\reply.hpp" />
+    <ClInclude Include="src\httpServer\request.hpp" />
+    <ClInclude Include="src\httpServer\request_handler.hpp" />
+    <ClInclude Include="src\httpServer\request_parser.hpp" />
+    <ClInclude Include="src\httpServer\server.hpp" />
+    <ClInclude Include="src\IVerifyTask.h" />
+    <ClInclude Include="src\TaskPoolModule.h" />
+    <ClInclude Include="src\testTask.h" />
+    <ClInclude Include="src\WeChatOrderTask.h" />
+    <ClInclude Include="src\HMAC_SHA1.h" />
+    <ClInclude Include="src\Md5.h" />
+    <ClInclude Include="src\MiVerifyManager.h" />
+    <ClInclude Include="src\SHA1.h" />
+    <ClInclude Include="src\tinyxml\tinystr.h" />
+    <ClInclude Include="src\tinyxml\tinyxml.h" />
+    <ClInclude Include="src\VerifyApp.h" />
+    <ClInclude Include="src\VerifyRequest.h" />
+    <ClInclude Include="src\WeChatVerifyTask.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

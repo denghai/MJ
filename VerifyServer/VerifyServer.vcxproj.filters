@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="App">
+      <UniqueIdentifier>{27c6589d-6c9c-4251-9659-40e30c15ff81}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SvrCommon">
+      <UniqueIdentifier>{0b3392f9-9336-4591-a5f9-40f5eff04d47}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verify">
+      <UniqueIdentifier>{2a44ae33-4ce0-4aa7-abca-0ceb696f4529}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verify\HMac">
+      <UniqueIdentifier>{b38b380d-3eeb-4f78-a692-8ed0336d93bb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verify\tinyXml">
+      <UniqueIdentifier>{fd6417c5-6019-4e4a-8b46-ae60111f46d6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verify\MD5">
+      <UniqueIdentifier>{2646de32-6299-466c-ba16-ebfae5e8638f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Verify\Task">
+      <UniqueIdentifier>{4d169d5e-7932-4719-b7a6-bbb85a2b36da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Apns">
+      <UniqueIdentifier>{13d50dcd-ca8c-482d-85ea-325988e77b29}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="httpModule">
+      <UniqueIdentifier>{6e6b2b8a-4185-4fd0-b5c3-ccaf55ab57e2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="httpModule\httpServer">
+      <UniqueIdentifier>{4259c932-bf0b-4c41-93e2-fde7e2560927}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\main.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VerifyApp.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\mutex.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\Sem.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\ThreadMod.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\MiVerifyManager.cpp">
+      <Filter>Verify</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HMAC_SHA1.cpp">
+      <Filter>Verify\HMac</Filter>
+    </ClCompile>
+    <ClCompile Include="src\SHA1.cpp">
+      <Filter>Verify\HMac</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxml\tinystr.cpp">
+      <Filter>Verify\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxml\tinyxml.cpp">
+      <Filter>Verify\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxml\tinyxmlerror.cpp">
+      <Filter>Verify\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\tinyxml\tinyxmlparser.cpp">
+      <Filter>Verify\tinyXml</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Md5.cpp">
+      <Filter>Verify\MD5</Filter>
+    </ClCompile>
+    <ClCompile Include="src\TaskPoolModule.cpp">
+      <Filter>App</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\httpRequest.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WeChatOrderTask.cpp">
+      <Filter>Verify\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\DBVerifyTask.cpp">
+      <Filter>Verify\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\DBTask.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\TaskPool.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\WorkThread.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AppleVerifyTask.cpp">
+      <Filter>Verify\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\WeChatVerifyTask.cpp">
+      <Filter>Verify\Task</Filter>
+    </ClCompile>
+    <ClCompile Include="src\VerifyRequest.cpp">
+      <Filter>Verify</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DBServer\src\DataBaseThread.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DBServer\src\DBRequest.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\DBServer\src\MySqlData.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\ApnsTask.cpp">
+      <Filter>Apns</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\connection.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\connection_manager.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\mime_types.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\reply.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\request_handler.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\request_parser.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\httpServer\server.cpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClCompile>
+    <ClCompile Include="src\HttpModule.cpp">
+      <Filter>httpModule</Filter>
+    </ClCompile>
+    <ClCompile Include="src\AnyLoginTask.cpp">
+      <Filter>Verify\Task</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\VerifyApp.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\mutex.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\Sem.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\ThreadMod.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\MiVerifyManager.h">
+      <Filter>Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HMAC_SHA1.h">
+      <Filter>Verify\HMac</Filter>
+    </ClInclude>
+    <ClInclude Include="src\SHA1.h">
+      <Filter>Verify\HMac</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tinyxml\tinystr.h">
+      <Filter>Verify\tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\tinyxml\tinyxml.h">
+      <Filter>Verify\tinyXml</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Md5.h">
+      <Filter>Verify\MD5</Filter>
+    </ClInclude>
+    <ClInclude Include="src\testTask.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="src\TaskPoolModule.h">
+      <Filter>App</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\httpRequest.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WeChatOrderTask.h">
+      <Filter>Verify\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\DBVerifyTask.h">
+      <Filter>Verify\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\DBTask.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\ITask.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\TaskPool.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\WorkThread.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AppleVerifyTask.h">
+      <Filter>Verify\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\WeChatVerifyTask.h">
+      <Filter>Verify\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\IVerifyTask.h">
+      <Filter>Verify\Task</Filter>
+    </ClInclude>
+    <ClInclude Include="src\VerifyRequest.h">
+      <Filter>Verify</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DBServer\src\DataBaseThread.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DBServer\src\DBRequest.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DBServer\src\DBRequestFlags.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\DBServer\src\MySqlData.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\ApnsTask.h">
+      <Filter>Apns</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\connection.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\connection_manager.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\header.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\mime_types.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\reply.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\request.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\request_handler.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\request_parser.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\httpServer\server.hpp">
+      <Filter>httpModule\httpServer</Filter>
+    </ClInclude>
+    <ClInclude Include="src\HttpModule.h">
+      <Filter>httpModule</Filter>
+    </ClInclude>
+    <ClInclude Include="src\AnyLoginTask.h">
+      <Filter>Verify\Task</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

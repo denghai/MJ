@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="资源文件">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Common">
+      <UniqueIdentifier>{d0d971ea-052d-4990-bb4d-b42a93ad8d7e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="SvrCommon">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="src\Room">
+      <UniqueIdentifier>{ddee2a1b-1730-40d2-91d8-890b0241bc31}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\Room\state">
+      <UniqueIdentifier>{7a9167fa-6f40-42ac-b1f8-81d35304e749}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\PeerCard.cpp">
+      <Filter>Common</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\httpRequest.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenServer.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenRoomManager.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenRoom.cpp">
+      <Filter>src\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenRoomPlayer.cpp">
+      <Filter>src\Room</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenWaitReadyState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenStartGameState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenBetState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenPKState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\GoldenGameResultState.cpp">
+      <Filter>src\Room\state</Filter>
+    </ClCompile>
+    <ClCompile Include="src\main.cpp">
+      <Filter>src</Filter>
+    </ClCompile>
+    <ClCompile Include="..\ServerCommon\RewardConfig.cpp">
+      <Filter>SvrCommon</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\GoldenMessageDefine.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\PeerCard.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\httpRequest.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenServer.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenRoomManager.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenRoom.h">
+      <Filter>src\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenRoomPlayer.h">
+      <Filter>src\Room</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenWaitReadyState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenStartGameState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenBetState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenPKState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="src\GoldenGameResultState.h">
+      <Filter>src\Room\state</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\IPeerCard.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Common\GoldenPeerCardAdapter.h">
+      <Filter>Common</Filter>
+    </ClInclude>
+    <ClInclude Include="..\ServerCommon\RewardConfig.h">
+      <Filter>SvrCommon</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>

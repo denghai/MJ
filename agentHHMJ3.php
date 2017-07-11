@@ -1,0 +1,1 @@
+﻿{ "str" : ["文明游戏，严禁赌博!","购买钻石请联系群主","新手玩家进群，试玩加微信：hhmjkf"],"canCreateRoom": 1,"notice":{"noticeType": 1,"noticeContent":["http://cymj.paiyouquan.com/dashboard/cymj/hhmj.png"],"ShowType":1,"sieralNum": 9 } }

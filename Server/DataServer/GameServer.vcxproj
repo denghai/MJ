@@ -1,0 +1,200 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{61A7DB25-7A43-44E9-A75D-FDD674D0E138}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GameServer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>../Bin/ServerBin</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>../Bin/ServerRelease</OutDir>
+    <EmbedManifest>false</EmbedManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;GAME_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../Common;../../Common/NetLib;../ServerCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>RakNetDLL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bin/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;GAME_SERVER;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <AdditionalIncludeDirectories>../../Common;../../Common/NetLib;../ServerCommon;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>RakNetDLL.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>../Bin/Lib;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\..\Common\BoxConfig.h" />
+    <ClInclude Include="..\..\Common\CardPoker.h" />
+    <ClInclude Include="..\..\Common\CommonData.h" />
+    <ClInclude Include="..\..\Common\CommonDefine.h" />
+    <ClInclude Include="..\..\Common\ConfigManager.h" />
+    <ClInclude Include="..\..\Common\ConfigReader.h" />
+    <ClInclude Include="..\..\Common\ContinueLoginConfig.h" />
+    <ClInclude Include="..\..\Common\GoldenMessageDefine.h" />
+    <ClInclude Include="..\..\Common\GoldenRoomData.h" />
+    <ClInclude Include="..\..\Common\IConfigFile.h" />
+    <ClInclude Include="..\..\Common\ItemConfig.h" />
+    <ClInclude Include="..\..\Common\LogManager.h" />
+    <ClInclude Include="..\..\Common\MessageDefine.h" />
+    <ClInclude Include="..\..\Common\MessageIdentifer.h" />
+    <ClInclude Include="..\..\Common\MissionConfig.h" />
+    <ClInclude Include="..\..\Common\PeerCard.h" />
+    <ClInclude Include="..\..\Common\RoomBaseData.h" />
+    <ClInclude Include="..\..\Common\RoomConfig.h" />
+    <ClInclude Include="..\..\Common\ShopConfg.h" />
+    <ClInclude Include="..\..\Common\TaxasMessageDefine.h" />
+    <ClInclude Include="..\..\Common\TaxasPokerMessage.h" />
+    <ClInclude Include="..\..\Common\TaxasPokerPeerCard.h" />
+    <ClInclude Include="..\..\Common\TaxasRoomData.h" />
+    <ClInclude Include="..\..\Common\TitleLevelConfig.h" />
+    <ClInclude Include="..\..\Common\Utility.h" />
+    <ClInclude Include="..\ServerCommon\ServerConfig.h" />
+    <ClInclude Include="..\ServerCommon\ServerMessageDefine.h" />
+    <ClInclude Include="..\ServerCommon\Timer.h" />
+    <ClInclude Include="src\Brocaster.h" />
+    <ClInclude Include="src\EventCenter.h" />
+    <ClInclude Include="src\Events.h" />
+    <ClInclude Include="src\GameRank.h" />
+    <ClInclude Include="src\GameServerApp.h" />
+    <ClInclude Include="src\InformConfig.h" />
+    <ClInclude Include="src\IPlayerComponent.h" />
+    <ClInclude Include="src\main.h" />
+    <ClInclude Include="src\Player.h" />
+    <ClInclude Include="src\PlayerBaseData.h" />
+    <ClInclude Include="src\PlayerEvent.h" />
+    <ClInclude Include="src\PlayerFriend.h" />
+    <ClInclude Include="src\PlayerItem.h" />
+    <ClInclude Include="src\PlayerMail.h" />
+    <ClInclude Include="src\PlayerManager.h" />
+    <ClInclude Include="src\PlayerMission.h" />
+    <ClInclude Include="src\PlayerOnlineBox.h" />
+    <ClInclude Include="src\PlayerShop.h" />
+    <ClInclude Include="src\RobotManager.h" />
+    <ClInclude Include="src\RoomBaseNew.h" />
+    <ClInclude Include="src\RoomGolden.h" />
+    <ClInclude Include="src\RoomBase.h" />
+    <ClInclude Include="src\RoomGoldenNew.h" />
+    <ClInclude Include="src\RoomManager.h" />
+    <ClInclude Include="src\RoomPeer.h" />
+    <ClInclude Include="src\RoomTaxasNew.h" />
+    <ClInclude Include="src\RoomTexasPoker.h" />
+    <ClInclude Include="src\SlotMachine.h" />
+    <ClInclude Include="src\TaxasPokerPeer.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\..\Common\BoxConfig.cpp" />
+    <ClCompile Include="..\..\Common\CardPoker.cpp" />
+    <ClCompile Include="..\..\Common\ConfigManager.cpp" />
+    <ClCompile Include="..\..\Common\ConfigReader.cpp" />
+    <ClCompile Include="..\..\Common\ContinueLoginConfig.cpp" />
+    <ClCompile Include="..\..\Common\GoldenRoomData.cpp" />
+    <ClCompile Include="..\..\Common\IConfigFile.cpp" />
+    <ClCompile Include="..\..\Common\ItemConfig.cpp" />
+    <ClCompile Include="..\..\Common\LogManager.cpp" />
+    <ClCompile Include="..\..\Common\MissionConfig.cpp" />
+    <ClCompile Include="..\..\Common\PeerCard.cpp" />
+    <ClCompile Include="..\..\Common\RoomBaseData.cpp" />
+    <ClCompile Include="..\..\Common\RoomConfig.cpp" />
+    <ClCompile Include="..\..\Common\ShopConfg.cpp" />
+    <ClCompile Include="..\..\Common\TaxasPokerPeerCard.cpp" />
+    <ClCompile Include="..\..\Common\TaxasRoomData.cpp" />
+    <ClCompile Include="..\..\Common\TitleLevelConfig.cpp" />
+    <ClCompile Include="..\..\Common\Utility.cpp" />
+    <ClCompile Include="..\ServerCommon\ServerConfig.cpp" />
+    <ClCompile Include="..\ServerCommon\Timer.cpp" />
+    <ClCompile Include="src\Brocaster.cpp" />
+    <ClCompile Include="src\EventCenter.cpp" />
+    <ClCompile Include="src\GameRank.cpp" />
+    <ClCompile Include="src\GameServerApp.cpp" />
+    <ClCompile Include="src\InformConfig.cpp" />
+    <ClCompile Include="src\IPlayerComponent.cpp" />
+    <ClCompile Include="src\main.cpp" />
+    <ClCompile Include="src\Player.cpp" />
+    <ClCompile Include="src\PlayerBaseData.cpp" />
+    <ClCompile Include="src\PlayerFriend.cpp" />
+    <ClCompile Include="src\PlayerItem.cpp" />
+    <ClCompile Include="src\PlayerMail.cpp" />
+    <ClCompile Include="src\PlayerManager.cpp" />
+    <ClCompile Include="src\PlayerMission.cpp" />
+    <ClCompile Include="src\PlayerOnlineBox.cpp" />
+    <ClCompile Include="src\PlayerShop.cpp" />
+    <ClCompile Include="src\RobotManager.cpp" />
+    <ClCompile Include="src\RoomBaseNew.cpp" />
+    <ClCompile Include="src\RoomGolden.cpp" />
+    <ClCompile Include="src\RoomBase.cpp" />
+    <ClCompile Include="src\RoomGoldenNew.cpp" />
+    <ClCompile Include="src\RoomManager.cpp" />
+    <ClCompile Include="src\RoomPeer.cpp" />
+    <ClCompile Include="src\RoomTaxasNew.cpp" />
+    <ClCompile Include="src\RoomTexasPoker.cpp" />
+    <ClCompile Include="src\SlotMachine.cpp" />
+    <ClCompile Include="src\TaxasPokerPeer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="ClassDiagram1.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
